@@ -29,12 +29,36 @@ body {
   -o-transition: left 1s ease-out;
   transition: left 1s ease-out; }
 
-.test {
-  position: relative;
+.label_tag {
+  position: absolute;
   width: 100px;
   height: 100px;
   background-color: #000;
-  left: 400px;
-  top: 300px; }
+  left: 0;
+  top: 0;
+  z-index: 2;
+  float: left; }
+
+.mouseMove {
+  margin: 0px; }
+
+.user_module_button {
+  position: absolute;
+  z-index: 999;
+  left: 20px;
+  top: 20px; }
+
+/*
+change bootstrap things
+*/
+#modalUserModel {
+  margin-left: 0px;
+  width: 400px; }
+
+.add_label_button {
+  position: absolute;
+  z-index: 999;
+  right: 10px;
+  top: 20px; }
 
 /*# sourceMappingURL=main.css.map */

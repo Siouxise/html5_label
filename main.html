@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>标签网</title>
+    <link rel="stylesheet" href="assets/main/css/main.css"/>
+    <link rel="stylesheet" href="rescues/bootstrap/css/bootstrap.css"/>
+</head>
+<body>
+<div class="bg_image">
+
+    <!-- 用户 模块 -->
+    <div class="user_module_button">
+        <button class="btn btn-lg" data-toggle="modal" data-target="#userModel">用户模块</button>
+    </div>
+
+    <div class="add_label_button">
+        <button class="btn btn-primary" id="addLabel">添加标签</button>
+    </div>
+
+
+    <div class="bg_show" id = "bgShow">
+        <div class="label_list" id="labelList">
+            <div class="label_tag" style="background-image: url('assets/main/img/label_1.png');"></div>
+            <div class="label_tag"></div>
+            <div class="label_tag"></div>
+            <div class="label_tag"></div>
+            <div class="label_tag"></div>
+        </div>
+    </div>
+</div>
+
+
+<!--  用户模块 用户列表  -->
+<div class="modal fade" id="userModel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog " id="modalUserModel">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel">用户模块 -- 好友列表</h4>
+            </div>
+            <div class="modal-body">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>name</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>34234</td>
+                        <td>56346536</td>
+                    </tr>
+                    <tr>
+                        <td>5633</td>
+                        <td>56363</td>
+                    </tr>
+                    <tr>
+                        <td>656</td>
+                        <td>6546</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+<script src="rescues/jquery/jquery.js"></script>
+<script src="rescues/bootstrap/js/bootstrap.js"></script>
+<!--背景滚动-->
+<script src="assets/main/js/move.js"></script>
+<!---   添加一个标签    --->
+<script src="assets/main/js/addLabel.js"></script>
+</html>

@@ -18,9 +18,8 @@
         <button class="btn btn-primary" id="addLabel">添加标签</button>
     </div>
 
-    <div class="bg_show" id = "bgShow">
+    <div class="bg_show" id="bgShow">
         <div class="label_list" id="labelList">
-
             <!--- 一个label ---->
             <div class="label_tag" style="background-image: url('assets/main/img/label_1.png');">
                 <!--- 状态栏 --->
@@ -91,6 +90,25 @@
     </div>
 </div>
 
+<!--  标签的 修改 底色, 等一系列问题  -->
+<div class="modal fade" id="labelChange" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog " id="modalUserModel">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel">用户模块 -- 好友列表</h4>
+            </div>
+            <div class="modal-body">
+                // 标签的逻辑框架
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 </body>
 <script src="rescues/jquery/jquery.js"></script>
@@ -100,8 +118,9 @@
 <!---   添加一个标签    --->
 <script src="assets/main/js/addLabel.js"></script>
 <!--  删除一个 标签 --->
-<script src = "assets/main/js/closeLabel.js"></script>
+<script src="assets/main/js/closeLabel.js"></script>
 <!-----  旋转 label 便签 -->
-<script src = "assets/main/js/labelRotate.js"></script>
-
+<script src="assets/main/js/labelRotate.js"></script>
+<!----   标签改变   ------>
+<script src="assets/main/js/labelChange.js"></script>
 </html>

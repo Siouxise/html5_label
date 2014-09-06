@@ -69,6 +69,7 @@ change bootstrap things
 
 .label_tag .label_main {
   width: 100%;
-  height: 80%; }
+  height: 80%;
+  overflow: hidden; }
 
 /*# sourceMappingURL=main.css.map */

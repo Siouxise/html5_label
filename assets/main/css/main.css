@@ -61,4 +61,17 @@ change bootstrap things
   right: 10px;
   top: 20px; }
 
+<<<<<<< HEAD
+=======
+.label_tag .label_button_list {
+  width: 100%;
+  height: 20px; }
+  .label_tag .label_button_list .close_button {
+    float: right; }
+
+.label_tag .label_main {
+  width: 100%;
+  height: 80%; }
+
+>>>>>>> gh-pages
 /*# sourceMappingURL=main.css.map */

@@ -7,7 +7,8 @@ $(document).ready(function () {
 
         var label_left;
         // 添加一个元素  这里的 id 属性是临时的
-        $("#labelList").append('<div class="label_tag" id="labelTagAdded" style="top: 80px;"></div>');
+        $("#labelList").append('<div class="label_tag" id="labelTagAdded" style="top: 80px;"><div class="label_button_list"><button class="glyphicon glyphicon-remove close_button">'+
+            '</button><button class="glyphicon glyphicon-refresh rotate_button"></button></div><div class="label_main"></div></div>');
 
         // 这个地方填写 left 的值 ， 用 鼠标的位置 + bgShow 的 left 的值 然后减去一个常数。
         // 这个地方的 bgShow 是 负值

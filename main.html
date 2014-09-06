@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>标签网</title>
-    <link rel="stylesheet" href="assets/main/css/main.css"/>
     <link rel="stylesheet" href="rescues/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="assets/main/css/main.css"/>
 </head>
 <body>
 <div class="bg_image">
@@ -18,18 +18,38 @@
         <button class="btn btn-primary" id="addLabel">添加标签</button>
     </div>
 
-
     <div class="bg_show" id = "bgShow">
         <div class="label_list" id="labelList">
-            <div class="label_tag" style="background-image: url('assets/main/img/label_1.png');"></div>
-            <div class="label_tag"></div>
-            <div class="label_tag"></div>
-            <div class="label_tag"></div>
-            <div class="label_tag"></div>
+
+            <!--- 一个label ---->
+            <div class="label_tag" style="background-image: url('assets/main/img/label_1.png');">
+                <!--- 状态栏 --->
+                <div class="label_button_list">
+                    <!--- 关闭按钮 --->
+                    <button class="glyphicon glyphicon-remove close_button"></button>
+                    <button class="glyphicon glyphicon-refresh rotate_button"></button>
+                </div>
+                <div class="label_main">
+                    aaaaa
+                </div>
+            </div>
+            <!---test  一个label ---->
+            <div class="label_tag" style="background-image: url('assets/main/img/label_1.png');">
+                <!--- 状态栏 --->
+                <div class="label_button_list">
+                    <!--- 关闭按钮 --->
+                    <button class="glyphicon glyphicon-remove close_button">
+                    </button>
+                    <button class="glyphicon glyphicon-refresh rotate_button"></button>
+                </div>
+                <div class="label_main">
+                    aaaaa
+                </div>
+            </div>
+
         </div>
     </div>
 </div>
-
 
 <!--  用户模块 用户列表  -->
 <div class="modal fade" id="userModel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -79,4 +99,9 @@
 <script src="assets/main/js/move.js"></script>
 <!---   添加一个标签    --->
 <script src="assets/main/js/addLabel.js"></script>
+<!--  删除一个 标签 --->
+<script src = "assets/main/js/closeLabel.js"></script>
+<!-----  旋转 label 便签 -->
+<script src = "assets/main/js/labelRotate.js"></script>
+
 </html>

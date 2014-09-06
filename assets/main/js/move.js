@@ -37,18 +37,24 @@ $(document).ready(function () {
     var _label_x,_label_y;
     var _label_move = false;
 
+
+// 当在 用 标题的时候， 我们不移动
+    $("body").on("mousedown",".label_button_list",function(e){
+        _bg_move =false;
+    });
+
     //这一行是 为了动态绑定  具体 查看 on 方法
-    $("body").on("mousedown",".label_tag",function(e){
-       // alert("a");
-//    })
+    $("body").on("mousedown",".label_main",function(e){
 //    $(".label_tag").mousedown(function(e){
         _isLabel =true;
         _label_move = true;
         _bg_move =false;
         // $(this) 选择的是 点击的那个
-        $(this).addClass("mouseMove");
-        _label_x = e.pageX - parseInt($(this).css("left"));
-        _label_y = e.pageY - parseInt($(this).css("top"));
+        // 这里只让  label_main 来进行移动 ， 这样的话， 我们就 直接
+        // 改变 父元素的 class 添加 mouseMove
+        $(this).offsetParent().addClass("mouseMove");
+        _label_x = e.pageX - parseInt($(this).offsetParent().css("left"));
+        _label_y = e.pageY - parseInt($(this).offsetParent().css("top"));
     });
     $(document).mousemove(function(e) {
         if (_label_move) {

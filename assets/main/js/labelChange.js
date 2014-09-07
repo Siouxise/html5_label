@@ -7,12 +7,14 @@ $(document).ready(function () {
     var _origin_z_index;
     // 记录原本的 高度和宽度 还有位置
     var _width, _height, _top, _left;
-
+    // 记录原来的旋转的角度
+    var _rorate;
     // 标签 和 fadeBG 的限制
     var _limit = 500;
 
-    // 存放 弗雷德元素 也就是整个标签
+    // 存放 父类的元素 也就是整个标签
     var _label_parent;
+
     // 为了防止在 拖动时 也会打开
     $("#labelList").on("mousedown", ".label_main", function () {
         _isClick = true;
@@ -25,9 +27,11 @@ $(document).ready(function () {
             // 判断的时候 判断是不是 z-index 在下面
             if (_isClick && (_label_parent.css("z-index")<_limit)) {
 
+                /**
+                 * 保存类
+                 */
                 // 保留原来的 z-index
                 _origin_z_index = _label_parent.css("z-index");
-
                 // 他的 父类  标签 直接提高等级
                 //  然后 由这个标签判断 是不是 需要进行 点击放大
                 // z-index = 1000
@@ -37,13 +41,19 @@ $(document).ready(function () {
                 _height = _label_parent.height();
                 _top = _label_parent.css("top");
                 _left = _label_parent.css("left");
+                // 保存 旋转的角度
+                _rorate = _label_parent.css("transform");
 
+                /**
+                 * 设置类
+                 */
                 // 设置 width 和 height
                 _label_parent.width(_width * 2)
                     .height(_height * 2)
                     .css("top", "80px")
                     .css("left", "400px");
-
+                // 设置旋转的角度
+                _label_parent.css("transform","rotate(0deg)");
                 // 设置背景颜色
                 // z-index   --------> 500
                 // 如果 多余 500 张的话, 就改这个地方的值
@@ -62,9 +72,8 @@ $(document).ready(function () {
         _isClick = false;
     });
 
-    ? /? 的发生的范德萨分 的发生地方
-    // 别忘了用 on
-    $(".save_button").click(function(){
+   /// 别忘了用 on
+    $("#labelList").on("click",".save_button",function(){
 
         // 改回原来图层的  z-index 和 背景颜色
         $("#fadeBG").css("z-index", "-1")
@@ -74,12 +83,11 @@ $(document).ready(function () {
             .height(_height)
             .css("top", _top)
             .css("left", _left)
-            .css("z-index",_origin_z_index);
-//
-//        //  初始化, 这里 因为 底层 看不到 变化看不到
-//        $("#fadeBG").css("z-index", "-1")
-//            .css("background-color","#")
-//            .css("opacity","0");
+            .css("z-index",_origin_z_index)
+            // 改回原来的角度
+            .css("transform",_rorate);
+
+
 
     });
 

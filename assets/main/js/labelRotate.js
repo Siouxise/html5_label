@@ -40,10 +40,16 @@ $(document).ready(function () {
              * 最后的结果
              */
             // 添加 css
-            _rotateLabel.css("transform", "rotate(" + _rotate + "deg)");
+            _rotateLabel
+                .removeClass("label_transform")
+                // 添加旋转的效果
+                .css("transform", "rotate(" + _rotate + "deg)");
 
         }
     }).mouseup(function (e) {
-        _isRotate = false;
+        if(_isRotate) {
+            _isRotate = false;
+            _rotateLabel.addClass("label_transform");
+        }
     });
 });

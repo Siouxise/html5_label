@@ -1,6 +1,9 @@
 /**
  * 背景的 移动
  */
+
+_big_limit = 400;
+
 $(document).ready(function () {
     // bg scroll
     var _bg_move = false; //移动标记
@@ -42,13 +45,10 @@ $(document).ready(function () {
     var _parent_label;
 
 // 当在 用 标题的时候， 我们不移动
-    $("#bgShow")
+    $("#labelList")
         .on("mousedown", ".label_button_list", function (e) {
             // 背景 不 移动
             _bg_move = false;
-
-            // 
-
 
         })
 
@@ -64,6 +64,42 @@ $(document).ready(function () {
             _parent_label.addClass("mouseMove");
             _label_x = e.pageX - parseInt(_parent_label.css("left"));
             _label_y = e.pageY - parseInt(_parent_label.css("top"));
+            // 结束了 -->  移动所需要的数据
+
+            // 开始了 z-index 的一些改变
+            // z-index 的一些 改变
+            var _min = 9999;
+            var _max = -1;
+            $(".label_tag").each(function () {
+                // 获取 标签  和 标签的 z-index 值
+                var _label = $(this);
+                var _label_z_index = parseInt(_label.css("z-index"));
+
+                if (_label_z_index < _min) {
+                    _min = _label_z_index;
+                }
+                // 这个地方 是为了防止放大后调整 z-index = 1000 的时候 产生的问题
+
+                if (_label_z_index > _max && _label_z_index < _big_limit) {
+                    _max = _label_z_index;
+                }
+            });
+            // 调整 z-index  为了 保持在 400 一下
+            if (_min > 10) {
+                // 没到最小的 大于10 的时候, 我们就直接减小 10 这样能解决以部分问题
+                // 最正宗的解决办法 是 每一次 添加 图片 都能 排序 ,,  然后 缩小 z-index 的值
+                $(".label_tag").each(function () {
+                    $(this).css("z-index", parseInt($(this).css("z-index")) - 10);
+                });
+            }
+            
+            //  改变点击的 成为 _max + 1 这样就能在最上面了
+            // 改变 父div
+            // 但是 如果是 在放大的时候 就会失效
+            // 所以在这里判断 是不是 最大化
+            if (parseInt($(this).offsetParent().css("z-index")) < _big_limit) {
+                $(this).offsetParent().css("z-index", _max + 1);
+            }
         });
 
     $(document).mousemove(function (e) {

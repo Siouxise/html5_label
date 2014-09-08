@@ -7,12 +7,18 @@ $(document).ready(function () {
     var _rotateLabel;
     $(".label_list").on("mousedown",".rotate_button",function (e) {
         _isRotate = true;
+        // 全局变量 的 改变
+        _bg_move = false;
         // 取出将要移动的类
         _rotateLabel = $(this).offsetParent();
     });
     $(document).mousemove(function (e) {
+        //
         // 判断 是不是 然后移动
         if (_isRotate) {
+            // 全局变量
+            // 控制 背景部移动
+            _bg_move = false;
 
             // 勾股定理
             var _labelX = _rotateLabel.width() / 2 + _rotateLabel.offset().left;

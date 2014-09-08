@@ -35,7 +35,7 @@ body {
   height: 100px;
   background-color: #000;
   left: 0;
-  top: 0;
+  top: 80px;
   z-index: 2;
   float: left;
   opacity: 1; }
@@ -52,7 +52,7 @@ body {
 
 .user_module_button {
   position: absolute;
-  z-index: 999;
+  z-index: 10;
   left: 20px;
   top: 20px; }
 
@@ -65,7 +65,7 @@ change bootstrap things
 
 .add_label_button {
   position: absolute;
-  z-index: 999;
+  z-index: 10;
   right: 10px;
   top: 20px; }
 
@@ -80,6 +80,10 @@ change bootstrap things
   height: 80%;
   overflow: hidden; }
 
+.label_templets {
+  top: 80px;
+  display: none; }
+
 .fade_bg {
   position: fixed;
   z-index: -1;
@@ -92,5 +96,8 @@ change bootstrap things
   -ms-transition: background-color 1s, z-index 1s, opacity 1s;
   -o-transition: background-color 1s, z-index 1s, opacity 1s;
   transition: background-color 1s, z-index 1s, opacity 1s; }
+
+.save_button {
+  display: none; }
 
 /*# sourceMappingURL=main.css.map */

@@ -35,8 +35,11 @@
                     <button class="save_button">save</button>
                     <button class="glyphicon glyphicon-refresh rotate_button"></button>
                 </div>
-                <div class="label_main" contenteditable="true">
+                <div class="label_main">
                     aaaaa
+                    <div class="a">
+                        adfdsfsdf
+                    </div>
                 </div>
             </div>
 
@@ -84,10 +87,32 @@
     </div>
 </div>
 
+<!-- list 模板 -->
+<!--- 一个label ---->
+<div class="label_templets" id ="labelTemplets">
+    <div class="label_tag labelTagAdded"  style="background-image: url('assets/main/img/label_1.png');">
+        <!--- 状态栏 --->
+        <div class="label_button_list">
+            <!--- 关闭按钮 --->
+            <button class="glyphicon glyphicon-remove close_button"></button>
+            <button class="save_button">save</button>
+            <button class="glyphicon glyphicon-refresh rotate_button"></button>
+        </div>
+        <div class="label_main">
+            aaaaa
+            <div class="a">
+                adfdsfsdf
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
 </body>
 <script src="rescues/jquery/jquery.js"></script>
 <script src="rescues/bootstrap/js/bootstrap.js"></script>
-<!--背景滚动-->
+<!--背景滚动 和 标签移动 -->
 <script src="assets/main/js/labelMove.js"></script>
 <!---   添加一个标签    --->
 <script src="assets/main/js/addLabel.js"></script>
@@ -95,6 +120,6 @@
 <script src="assets/main/js/labelDel.js"></script>
 <!-----  旋转 label 便签 -->
 <script src="assets/main/js/labelRotate.js"></script>
-<!----   标签改变   ------>
+<!----   标签的放大和缩小   ------>
 <script src="assets/main/js/labelChange.js"></script>
 </html>

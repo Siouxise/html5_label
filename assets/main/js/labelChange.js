@@ -2,7 +2,7 @@
  * Created by danny on 9/6/14.
  */
 $(document).ready(function () {
-    var _isClick = this;
+    var _isClick = false;
     // 记录原来的 z-index 的值
     var _origin_z_index;
     // 记录原本的 高度和宽度 还有位置
@@ -81,10 +81,14 @@ $(document).ready(function () {
 
     // 如果移动的话 就更改这里的值  这样 click 就不能运行了
     $(document).mousemove(function (e) {
+        if(_isClick){
+            _bg_move = false;
+        }
         _isClick = false;
     });
 
     /// 别忘了用 on
+    // 当点击时 就会保存
     $("#labelList").on("click", ".save_button", function () {
 
         // 改回原来图层的  z-index 和 背景颜色

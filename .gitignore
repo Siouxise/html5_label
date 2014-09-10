@@ -2,3 +2,4 @@
 .sass-cache/*
 testDir/*
 *.css.map
+resources/git/*

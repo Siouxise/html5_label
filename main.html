@@ -3,13 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>标签网</title>
-    <link rel="stylesheet" href="rescues/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="resources/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="resources/colorpicker/css/colorpicker.css"/>
+
     <link rel="stylesheet" href="assets/main/css/main.css"/>
 </head>
 <body class="dis_select">
 
 <!-- 背景层 用来更改 label 放大时的背景 -->
-<div class="fade_bg" id="fadeBG"></div>
+<div class="fade_bg" id="fadeBG">
+    <div class="change_setting">
+        bbb
+        <div class="row change_color">
+            aaa
+            <h6>更改颜色</h6>
+            <button class="btn" id="changeColor">更改颜色</button>
+        </div>
+    </div>
+</div>
 
 <div class="bg_image">
 
@@ -110,8 +121,9 @@
 
 
 </body>
-<script src="rescues/jquery/jquery.js"></script>
-<script src="rescues/bootstrap/js/bootstrap.js"></script>
+<script src="resources/jquery/jquery.js"></script>
+<script src="resources/bootstrap/js/bootstrap.js"></script>
+<script src ="resources/colorpicker/js/bootstrap-colorpicker.js"></script>
 <!-- 背景移动  -->
 <script src="assets/main/js/bgMove.js"></script>
 <!-- 标签移动 -->
@@ -123,5 +135,7 @@
 <!-----  旋转 label 便签 -->
 <script src="assets/main/js/labelRotate.js"></script>
 <!----   标签的放大和缩小   ------>
+<script src="assets/main/js/labelBigSmall.js"></script>
+<!---- 标签的 改变  颜色, 透明度, 还有 背景图片  -->
 <script src="assets/main/js/labelChange.js"></script>
 </html>

@@ -5,7 +5,7 @@
     <title>标签网</title>
     <link rel="stylesheet" href="resources/bootstrap/css/bootstrap.css"/>
     <link rel="stylesheet" href="resources/colorpicker/css/bootstrap-colorpicker.css"/>
-
+    <link rel="stylesheet" href="resources/slider/css/slider.css"/>
     <link rel="stylesheet" href="assets/main/css/main.css"/>
 </head>
 <body class="dis_select">
@@ -13,11 +13,27 @@
 <!-- 背景层 用来更改 label 放大时的背景 -->
 <div class="fade_bg" id="fadeBG">
     <div class="change_setting">
-        bbb
         <div class="row change_color">
-            aaa
-            <h6>更改颜色</h6>
-            <button class="btn btn-primary" id="colorChange">更改颜色</button>
+            <button class="btn btn-primary" id="bgColorChange">更改背景颜色</button>
+        </div>
+        <div class="row change_color">
+            <button class="btn btn-primary" id="fontColorChange">更改字体颜色</button>
+        </div>
+        <div class="row change_opacity">
+            更改透明度:
+        </div>
+        <div class="row change_opacity">
+            <input type="text" class="span2" value="10" id="slider_label" />
+        </div>
+        <div class="row">
+            <span>更改图片</span>
+        </div>
+        <div class="row change_label_ground">
+            <div class="col-sm-3 label_img" id="labelBG1"><img src="assets/main/img/label_1.png" alt="" width="100%" height=""/></div>
+            <div class="col-sm-3 label_img" id="labelBG2"><img src="assets/main/img/label_2.png" alt="" width="100%" height=""/></div>
+            <div class="col-sm-3 label_img" id="labelBG3"><img src="assets/main/img/label_3.png" alt="" width="100%" height=""/></div>
+            <div class="col-sm-3 label_img" id="labelBG4"><img src="assets/main/img/label_4.png" alt="" width="100%" height=""/></div>
+            <div class="col-sm-3 label_img" id="labelBG5"><img src="" alt="" width="100%" height=""/></div>
         </div>
     </div>
 </div>
@@ -31,6 +47,10 @@
 
     <div class="add_label_button">
         <button class="btn btn-primary" id="addLabel">添加标签</button>
+    </div>
+
+    <div class="change_main_ground">
+        <button class="btn btn-primary" id="changeMainGround">改变背景</button>
     </div>
 
 
@@ -97,11 +117,43 @@
         </div>
     </div>
 </div>
+<!-----    下面的是 背景 图片的改变   ----->
+<!--modal-->
+
+<div class="modal fade" id="bgChangeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog " >
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title">选择一个你喜欢的背景</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row col-md-3 bg_image_id">
+                    <img src="assets/main/img/label_1.png" width="100%" height="100%" alt=""/>
+                </div>
+                <div class="row col-md-3 bg_image_id">
+                    <img src="assets/main/img/bgimage.jpg" width="100%" height="100%" alt=""/>
+                </div>
+                <div class="row col-md-3 bg_image_id">
+                    <img src="assets/main/img/bgimage.jpg" width="100%" height="100%" alt=""/>
+                </div>
+                <div class="row col-md-3 bg_image_id">
+                    <img src="assets/main/img/bgimage.jpg" width="100%" height="100%" alt=""/>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 
 <!-- list 模板 -->
 <!--- 一个label ---->
-<div class="label_templets" id ="labelTemplets">
-    <div class="label_tag labelTagAdded"  style="background-image: url('assets/main/img/label_1.png');">
+<div class="label_templets" id="labelTemplets">
+    <div class="label_tag labelTagAdded" >
         <!--- 状态栏 --->
         <div class="label_button_list">
             <!--- 关闭按钮 --->
@@ -119,17 +171,17 @@
 </div>
 
 
-
 </body>
 <script src="resources/jquery/jquery.js"></script>
 <script src="resources/bootstrap/js/bootstrap.js"></script>
-<script src ="resources/colorpicker/js/bootstrap-colorpicker.js"></script>
+<script src="resources/colorpicker/js/bootstrap-colorpicker.js"></script>
+<script src="resources/slider/js/bootstrap-slider.js"></script>
 <!-- 背景移动  -->
 <script src="assets/main/js/bgMove.js"></script>
 <!-- 标签移动 -->
 <script src="assets/main/js/labelMove.js"></script>
 <!---   添加一个标签    --->
-<script src="assets/main/js/addLabel.js"></script>
+<script src="assets/main/js/labelAdd.js"></script>
 <!--  删除一个 标签 --->
 <script src="assets/main/js/labelDel.js"></script>
 <!-----  旋转 label 便签 -->
@@ -138,4 +190,6 @@
 <script src="assets/main/js/labelBigSmall.js"></script>
 <!---- 标签的 改变  颜色, 透明度, 还有 背景图片  -->
 <script src="assets/main/js/labelChange.js"></script>
+<!--  背景图片的改变 -->
+<script src="assets/main/js/bgChange.js"></script>
 </html>

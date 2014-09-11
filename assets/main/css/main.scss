@@ -46,16 +46,17 @@ body {
   z-index: 2;
   float: left;
   opacity: 1;
+  background-size: 100% 100%;
 
 
 }
 .label_transform{
   // 用于 添加使用
-  -webkit-transition: height 1s, width 1s, left 1s, top 1s, opacity 1s, transform 1s;
-  -moz-transition: height 1s, width 1s, left 1s, top 1s, opacity 1s, transform 1s;
-  -ms-transition: height 1s, width 1s, left 1s, top 1s, opacity 1s, transform 1s;
-  -o-transition: height 1s, width 1s, left 1s, top 1s, opacity 1s, transform 1s;
-  transition: height 1s, width 1s, left 1s, top 1s, opacity 1s, transform 1s;
+  -webkit-transition: height 1s, width 1s, left 1s, top 1s,/* opacity 1s,*/ transform 1s;
+  -moz-transition: height 1s, width 1s, left 1s, top 1s,/* opacity 1s,*/ transform 1s;
+  -ms-transition: height 1s, width 1s, left 1s, top 1s,/* opacity 1s,*/ transform 1s;
+  -o-transition: height 1s, width 1s, left 1s, top 1s,/* opacity 1s,*/ transform 1s;
+  transition: height 1s, width 1s, left 1s, top 1s,/* opacity 1s,*/ transform 1s;
 }
 #label_action{
   // 不知道....
@@ -150,3 +151,27 @@ change bootstrap things
 .labelBig{
   font-size: 12px;
 }
+
+.change_opacity{
+  margin-top: 30px;
+}
+.change_label_ground{
+  .col-sm-3{
+    height: 80px;
+  }
+}.labelTagAdded{
+   background-image: url('../img/label_1.png');
+  background-size: 100% 100%;
+ }
+ .change_main_ground{
+   position: absolute;
+   z-index: 10;
+   right: 10px;
+   bottom: 20px;
+ }
+ .bg_image_id{
+   margin: 5px;
+ }
+ .change_color{
+   margin-top: 20px;
+ }

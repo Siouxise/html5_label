@@ -29,10 +29,11 @@ $(document).ready(function () {
             if (_isClick && (_label_parent.css("z-index") < _limit)) {
 
                 /**
-                 * 添加一个标志 id
+                 * 添加一个标志 class
+                 * // 主要是 在 label chagne 中使用
                  *
                  */
-                _label_parent.attr("id","labelBig");
+                _label_parent.addClass("labelBig");
 
                 /**
                  * 保存
@@ -109,8 +110,10 @@ $(document).ready(function () {
             .css("z-index", _origin_z_index)
             // 改回原来的角度
             .css("transform", _rorate)
-            .attr("id",null);
-
+            // 删除 class  标志
+            .removeClass("labelBig")
+            // 不可改写文件
+            .children(".label_main").attr("contentEditAble", null);
         // 按钮的更改
         _label_parent
             // 显示按钮 和 取消 按钮

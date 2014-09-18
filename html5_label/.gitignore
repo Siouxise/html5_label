@@ -3,3 +3,4 @@
 testDir/*
 *.css.map
 resources/git/*
+*.scssc

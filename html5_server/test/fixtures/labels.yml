@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  content: MyText
+  bg_image: MyString
+  bg_color: MyString
+  text_color: MyString
+  opacity: 1.5
+  rotate: MyString
+  z_index: 1
+  left: MyString
+  top: MyString
+  is_del: false
+
+two:
+  user_id: 1
+  content: MyText
+  bg_image: MyString
+  bg_color: MyString
+  text_color: MyString
+  opacity: 1.5
+  rotate: MyString
+  z_index: 1
+  left: MyString
+  top: MyString
+  is_del: false

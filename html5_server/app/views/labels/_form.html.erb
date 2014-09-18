@@ -1,0 +1,61 @@
+<%= form_for(@label) do |f| %>
+  <% if @label.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@label.errors.count, "error") %> prohibited this label from being saved:</h2>
+
+      <ul>
+      <% @label.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :content %><br>
+    <%= f.text_area :content %>
+  </div>
+  <div class="field">
+    <%= f.label :bg_image %><br>
+    <%= f.text_field :bg_image %>
+  </div>
+  <div class="field">
+    <%= f.label :bg_color %><br>
+    <%= f.text_field :bg_color %>
+  </div>
+  <div class="field">
+    <%= f.label :text_color %><br>
+    <%= f.text_field :text_color %>
+  </div>
+  <div class="field">
+    <%= f.label :opacity %><br>
+    <%= f.text_field :opacity %>
+  </div>
+  <div class="field">
+    <%= f.label :rotate %><br>
+    <%= f.text_field :rotate %>
+  </div>
+  <div class="field">
+    <%= f.label :z_index %><br>
+    <%= f.number_field :z_index %>
+  </div>
+  <div class="field">
+    <%= f.label :left %><br>
+    <%= f.text_field :left %>
+  </div>
+  <div class="field">
+    <%= f.label :top %><br>
+    <%= f.text_field :top %>
+  </div>
+  <div class="field">
+    <%= f.label :is_del %><br>
+    <%= f.check_box :is_del %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

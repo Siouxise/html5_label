@@ -4,12 +4,17 @@ class LabelsController < ApplicationController
   # GET /labels
   # GET /labels.json
   def index
-    @labels = Label.all
+    # 这里先提取出 用户的信息
+    if user_signed_in?
+      @user = return_user
+      @labels = @user.labels
+    end
   end
 
   # GET /labels/1
   # GET /labels/1.json
   def show
+
   end
 
   # GET /labels/new
@@ -62,13 +67,13 @@ class LabelsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_label
-      @label = Label.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_label
+    @label = Label.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def label_params
-      params.require(:label).permit(:user_id, :content, :bg_image, :bg_color, :text_color, :opacity, :rotate, :z_index, :left, :top, :is_del)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def label_params
+    params.require(:label).permit(:user_id, :content, :bg_image, :bg_color, :text_color, :opacity, :rotate, :z_index, :left, :top, :is_del)
+  end
 end

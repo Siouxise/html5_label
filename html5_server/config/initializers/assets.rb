@@ -6,3 +6,10 @@ Rails.application.config.assets.version = '1.0'
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 # Rails.application.config.assets.precompile += %w( search.js )
+Rails.application.config.assets.precompile += %w( sessions.css )
+Rails.application.config.assets.precompile += %w( labels.css )
+Rails.application.config.assets.precompile += %w( bootstrap-colorpicker.css )
+Rails.application.config.assets.precompile += %w( slider.css )
+Rails.application.config.assets.precompile += %w( bootstrap-colorpicker.js )
+Rails.application.config.assets.precompile += %w( bootstrap-slider.js )
+Rails.application.config.assets.precompile += %w( bootstrap.js )

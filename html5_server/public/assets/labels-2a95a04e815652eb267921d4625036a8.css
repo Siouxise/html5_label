@@ -1,0 +1,206 @@
+/* line 10, /home/Code/qiLuSoftware/html5_server/app/assets/stylesheets/labels.css.scss */
+html,
+body,
+div,
+li,
+ul {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+}
+
+/* line 17, /home/Code/qiLuSoftware/html5_server/app/assets/stylesheets/labels.css.scss */
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 22, /home/Code/qiLuSoftware/html5_server/app/assets/stylesheets/labels.css.scss */
+.bg_image {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* line 28, /home/Code/qiLuSoftware/html5_server/app/assets/stylesheets/labels.css.scss */
+.bg_show {
+  position: relative;
+  background-image: url("bg2.png");
+  background-size: 100% 100%;
+  width: 200%;
+  height: 100%;
+  left: 0px;
+  -webkit-transition: left 1s ease-out;
+  -moz-transition: left 1s ease-out;
+  -ms-transition: left 1s ease-out;
+  -o-transition: left 1s ease-out;
+  transition: left 1s ease-out;
+}
+
+/* line 44, /home/Code/qiLuSoftware/html5_server/app/assets/stylesheets/labels.css.scss */
+.label_tag {
+  background-image: url("label2.png");
+  position: absolute;
+  width: 150px;
+  height: 160px;
+  background-color: #ffd81e;
+  left: 0;
+  top: 80px;
+  z-index: 2;
+  float: left;
+  opacity: 1;
+  font-size: 14px;
+  background-size: 100% 100%;
+}
+
+/* line 61, /home/Code/qiLuSoftware/html5_server/app/assets/stylesheets/labels.css.scss */
+.label_transform {
+  -webkit-transition: height 1s, width 1s, left 1s, top 1s, transform 1s, font-size 1s;
+  -moz-transition: height 1s, width 1s, left 1s, top 1s, transform 1s, font-size 1s;
+  -ms-transition: height 1s, width 1s, left 1s, top 1s, transform 1s, font-size 1s;
+  -o-transition: height 1s, width 1s, left 1s, top 1s, transform 1s, font-size 1s;
+  transition: height 1s, width 1s, left 1s, top 1s, transform 1s, font-size 1s;
+}
+
+/* line 73, /home/Code/qiLuSoftware/html5_server/app/assets/stylesheets/labels.css.scss */
+.mouseMove {
+  margin: 0px;
+}
+
+/* line 80, /home/Code/qiLuSoftware/html5_server/app/assets/stylesheets/labels.css.scss */
+.user_module_button {
+  position: absolute;
+  z-index: 10;
+  left: 20px;
+  top: 20px;
+}
+
+/*
+change bootstrap things
+*/
+/* line 90, /home/Code/qiLuSoftware/html5_server/app/assets/stylesheets/labels.css.scss */
+#modalUserModel {
+  margin-left: 0px;
+  width: 400px;
+}
+
+/* line 95, /home/Code/qiLuSoftware/html5_server/app/assets/stylesheets/labels.css.scss */
+.add_label_button {
+  position: absolute;
+  z-index: 10;
+  right: 10px;
+  top: 20px;
+}
+
+/* line 102, /home/Code/qiLuSoftware/html5_server/app/assets/stylesheets/labels.css.scss */
+.label_tag .label_button_list {
+  width: 100%;
+}
+/* line 105, /home/Code/qiLuSoftware/html5_server/app/assets/stylesheets/labels.css.scss */
+.label_tag .label_button_list .close_button {
+  float: right;
+}
+
+/* line 110, /home/Code/qiLuSoftware/html5_server/app/assets/stylesheets/labels.css.scss */
+.label_tag .label_main {
+  width: 80%;
+  height: 70%;
+  padding: 20px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+
+/* line 119, /home/Code/qiLuSoftware/html5_server/app/assets/stylesheets/labels.css.scss */
+.label_templets {
+  top: 80px;
+  display: none;
+}
+
+/* line 123, /home/Code/qiLuSoftware/html5_server/app/assets/stylesheets/labels.css.scss */
+.fade_bg {
+  position: fixed;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0;
+  -webkit-transition: background-color 1s, z-index 1s, opacity 1s;
+  -moz-transition: background-color 1s, z-index 1s, opacity 1s;
+  -ms-transition: background-color 1s, z-index 1s, opacity 1s;
+  -o-transition: background-color 1s, z-index 1s, opacity 1s;
+  transition: background-color 1s, z-index 1s, opacity 1s;
+}
+
+/* line 137, /home/Code/qiLuSoftware/html5_server/app/assets/stylesheets/labels.css.scss */
+.save_button {
+  display: none;
+}
+
+/* line 142, /home/Code/qiLuSoftware/html5_server/app/assets/stylesheets/labels.css.scss */
+.dis_select {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* line 151, /home/Code/qiLuSoftware/html5_server/app/assets/stylesheets/labels.css.scss */
+.change_setting {
+  margin-left: auto;
+  margin-right: 100px;
+  margin-top: 100px;
+  width: 300px;
+  height: 500px;
+  color: #FFF;
+  opacity: 1;
+  background-color: #000;
+}
+
+/* line 162, /home/Code/qiLuSoftware/html5_server/app/assets/stylesheets/labels.css.scss */
+.labelBig {
+  font-size: 18px;
+}
+
+/* line 166, /home/Code/qiLuSoftware/html5_server/app/assets/stylesheets/labels.css.scss */
+.change_opacity {
+  margin-top: 30px;
+}
+
+/* line 170, /home/Code/qiLuSoftware/html5_server/app/assets/stylesheets/labels.css.scss */
+.change_label_ground .col-sm-3 {
+  height: 80px;
+}
+
+/* line 173, /home/Code/qiLuSoftware/html5_server/app/assets/stylesheets/labels.css.scss */
+.labelTagAdded {
+  background-image: url("label1.png");
+  background-size: 100% 100%;
+}
+
+/* line 177, /home/Code/qiLuSoftware/html5_server/app/assets/stylesheets/labels.css.scss */
+.change_main_ground {
+  position: absolute;
+  z-index: 10;
+  right: 10px;
+  bottom: 20px;
+}
+
+/* line 183, /home/Code/qiLuSoftware/html5_server/app/assets/stylesheets/labels.css.scss */
+.bg_image_id {
+  margin: 5px;
+}
+
+/* line 186, /home/Code/qiLuSoftware/html5_server/app/assets/stylesheets/labels.css.scss */
+.change_color {
+  margin-top: 20px;
+}
+
+/* line 189, /home/Code/qiLuSoftware/html5_server/app/assets/stylesheets/labels.css.scss */
+img {
+  width: 100%;
+}
